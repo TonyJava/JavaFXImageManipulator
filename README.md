@@ -33,3 +33,4 @@ Classify the image with pre-trained model.
 In progress:
 Some functionalies in the menu bar.
 Selection of region of interest (ROI) and record down the corrdinates with respect to the original image.
+Maybe something else.
