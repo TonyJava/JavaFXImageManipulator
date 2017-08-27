@@ -104,14 +104,16 @@ public class MainController implements Initializable, ControllerInterface {
             		return;
             }
             
+            currFilePath = file.getAbsolutePath();
+            
             Platform.runLater(new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println(file.getAbsolutePath());
-                    filePath.setText("File: " + file.getAbsolutePath());
-                    image = new Image("file:" + file.getAbsolutePath());
+                    System.out.println(currFilePath);
+                    filePath.setText("File: " + currFilePath);
+                    image = new Image("file:" + currFilePath);
                     iv.setImage(image);
-                		imageProcessor.load(file.getAbsolutePath());
+                		imageProcessor.load(currFilePath);
                 		iv.setPreserveRatio(true);
                 		ImageViewUtils.enableImageViewScalingAndPanning(iv, image);
                 }
