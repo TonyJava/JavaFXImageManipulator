@@ -1,5 +1,6 @@
 package utils;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -15,7 +16,7 @@ import org.tensorflow.Session;
 import org.tensorflow.Tensor;
 
 public class TensorflowUtils {
-	private final static String modelDir = "/Users/jiahaoji/Documents/App development/workspace/TensorflowExample/src";
+	private final static String modelDir = new File("").getAbsolutePath()+"/res/";
 	
 	public static String classify(String filePath) {
 		byte[] graphDef = readAllBytesOrExit(Paths.get(modelDir, "tensorflow_inception_graph.pb"));
